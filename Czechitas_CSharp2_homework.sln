@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson2_cycle_asterisks", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson2_archer", "Lesson2_archer\Lesson2_archer.csproj", "{0E329976-75BE-4E24-AFBE-D5E2E02C8E4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson2_guess_the_number", "Lesson2_guess_the_number\Lesson2_guess_the_number.csproj", "{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0E329976-75BE-4E24-AFBE-D5E2E02C8E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E329976-75BE-4E24-AFBE-D5E2E02C8E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E329976-75BE-4E24-AFBE-D5E2E02C8E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
