@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lesson2_guess_the_number
 {
-    internal class Player
+    internal class NumberGuessing
     {
-        public int NumberOfGuesses;
+        int NumberOfGuesses;
         public bool IsThisYourNumber(int guessedNumber, int numberToBeGuessed)
         {
             NumberOfGuesses++;

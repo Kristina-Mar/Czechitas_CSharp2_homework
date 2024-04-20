@@ -7,7 +7,7 @@
             NumberGenerator numberGenerator = new NumberGenerator();
             int numberToBeGuessed = numberGenerator.GenerateNumber();
 
-            Player player = new Player();
+            NumberGuessing player = new NumberGuessing();
 
             Console.WriteLine("I am of thinking a number from 1 to 100. Can you guess which one?");
 
