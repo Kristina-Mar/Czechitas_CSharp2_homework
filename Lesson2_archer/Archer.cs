@@ -8,22 +8,22 @@ namespace Lesson2_archer
 {
     internal class Archer
     {
-        public int NumberOfArrows = 10;
+        private int RemainingArrows = 10;
+        public bool IsOutOfArrows = false;
         public void ShootArrow()
         {
-            if (NumberOfArrows > 0)
+            if (RemainingArrows > 0)
             {
-                NumberOfArrows--;
-                Console.WriteLine("Bullseye everytime, baby!");
-                if (NumberOfArrows == 0)
+                RemainingArrows--;
+                if (RemainingArrows == 0)
                 {
-                    Console.WriteLine("This was my last shot.");
+                    IsOutOfArrows = true;
                 }
             }
-            else
-            {
-                Console.WriteLine("I'm out of arrows!");
-            }
+        }
+        public bool IsLastShot()
+        {
+            return RemainingArrows == 1;
         }
     }
 }
