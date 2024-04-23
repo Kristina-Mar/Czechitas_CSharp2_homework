@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Addition addition1 = new Addition();
+            IntegerAdditionCalculator addition1 = new IntegerAdditionCalculator();
             Console.WriteLine($"Write two numbers you want to add up.");
             Console.Write($"Number 1: ");
             string input1 = Console.ReadLine();
@@ -26,7 +26,7 @@
                 input2 = Console.ReadLine();
                 isInput2Number = double.TryParse(input2, out number2);
             }
-            addition1.AddAndWriteResult(number1, number2);
+            addition1.Add(number1, number2);
             Console.ReadLine();
         }
     }
