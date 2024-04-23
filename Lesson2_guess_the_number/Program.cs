@@ -12,25 +12,38 @@
             Console.WriteLine("I am of thinking a number from 1 to 100. Can you guess which one?");
 
             string input = Console.ReadLine();
-            int guess = 0;
-            bool IsGuessANumber = int.TryParse(input, out guess);
+            int guessedNumber = 0;
+            bool IsGuessANumber = int.TryParse(input, out guessedNumber);
 
-            while (!IsGuessANumber || guess < 1 || guess > 100)
+            while (!IsGuessANumber || guessedNumber < 1 || guessedNumber > 100)
             {
                 Console.WriteLine("Incorrect, try again with a number from 1 to 100:");
                 input = Console.ReadLine();
-                IsGuessANumber = int.TryParse(input, out guess);
+                IsGuessANumber = int.TryParse(input, out guessedNumber);
             }
-
-            while (!player.IsThisYourNumber(guess, numberToBeGuessed)) // The player guesses until they get the answer right.
+            while (true) // The player guesses until they get the answer right.
             {
+                int guess = player.IsThisYourNumber(guessedNumber, numberToBeGuessed);
+                if (guess == 0)
+                {
+                    Console.WriteLine($"That's right, I was thinking of {numberToBeGuessed}. Well done! You got the right answer in {player.HowManyGuesses()} guesses.");
+                    break;
+                }
+                if (guess > 0)
+                {
+                    Console.WriteLine("The number I'm thinking of is lower, try again!");
+                }
+                if (guess < 0)
+                {
+                    Console.WriteLine("The number I'm thinking of is higher, try again!");
+                }
                 input = Console.ReadLine();
-                IsGuessANumber = int.TryParse(input, out guess);
-                while (!IsGuessANumber || guess < 1 || guess > 100) // The game only allows numbers from 1 to 100.
+                IsGuessANumber = int.TryParse(input, out guessedNumber);
+                while (!IsGuessANumber || guessedNumber < 1 || guessedNumber > 100) // The game only allows numbers from 1 to 100.
                 {
                     Console.WriteLine("Incorrect, try again with a number from 1 to 100:");
                     input = Console.ReadLine();
-                    IsGuessANumber = int.TryParse(input, out guess);
+                    IsGuessANumber = int.TryParse(input, out guessedNumber);
                 }
             }
             Console.ReadLine();
