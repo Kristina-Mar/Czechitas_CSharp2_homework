@@ -5,13 +5,15 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson1_homework", "Lesson1_homework\Lesson1_homework.csproj", "{D02D182F-A0A7-47A2-8B8A-DF80D41B5FF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson2_addition", "Lesson2_addition\Lesson2_addition.csproj", "{20E3F21F-C53B-48B3-BB7A-91112D1965C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson2_addition", "Lesson2_addition\Lesson2_addition.csproj", "{20E3F21F-C53B-48B3-BB7A-91112D1965C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson2_cycle_asterisks", "Lesson2_cycle_asterisks\Lesson2_cycle_asterisks.csproj", "{E652B125-DCEC-43FD-8A19-1197BC5C68CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson2_cycle_asterisks", "Lesson2_cycle_asterisks\Lesson2_cycle_asterisks.csproj", "{E652B125-DCEC-43FD-8A19-1197BC5C68CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson2_archer", "Lesson2_archer\Lesson2_archer.csproj", "{0E329976-75BE-4E24-AFBE-D5E2E02C8E4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson2_archer", "Lesson2_archer\Lesson2_archer.csproj", "{0E329976-75BE-4E24-AFBE-D5E2E02C8E4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson2_guess_the_number", "Lesson2_guess_the_number\Lesson2_guess_the_number.csproj", "{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson2_guess_the_number", "Lesson2_guess_the_number\Lesson2_guess_the_number.csproj", "{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson3_homework", "Lesson3_homework\Lesson3_homework.csproj", "{4E6AC850-BD41-4E17-8947-CEE4AE2DD712}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0A29046-CAE9-4C92-BA7B-93B8D75F323F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6AC850-BD41-4E17-8947-CEE4AE2DD712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6AC850-BD41-4E17-8947-CEE4AE2DD712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6AC850-BD41-4E17-8947-CEE4AE2DD712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6AC850-BD41-4E17-8947-CEE4AE2DD712}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
