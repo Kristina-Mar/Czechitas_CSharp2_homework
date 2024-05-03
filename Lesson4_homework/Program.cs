@@ -69,7 +69,7 @@
                 shoppingList.Add(bread.Key, bread.Value);
             }
 
-            // Writes out the shopping list.
+            // Prints out the shopping list.
             foreach (KeyValuePair<string, int> item in shoppingList)
             {
                 Console.WriteLine($"{item.Key}: {item.Value}");
