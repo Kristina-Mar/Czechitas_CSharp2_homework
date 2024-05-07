@@ -19,7 +19,6 @@
             string wordToRemove = "weekend";
             listOfStrings.Remove(wordToRemove);
 
-
             // 5. Zjisti, jestli tento list obsahuje nějakou hodnotu pomocí list metody Contains
             string includedWord = "bed";
             if (listOfStrings.Contains(includedWord))
@@ -33,7 +32,7 @@
 
             // 6. Vypiš do konzole, kolik je v tom listu prvků a připoj k tomu všechny ty hodnoty (např: "2: modra, zelena").
             Console.Write($"The list has {listOfStrings.Count} items: ");
-            Console.Write(String.Join(", ", listOfStrings));
+            Console.Write(string.Join(", ", listOfStrings));
             Console.WriteLine();
 
             // 7. Vytvoř slovník, kde klíčem bude položka nákupu (string) a hodnotou cena té položky, a vlož nějaké hodnoty (např: <"chleba", 20>).
@@ -48,25 +47,17 @@
             };
 
             // 8. Zjisti, jestli slovník obsahuje nějakou konkrétní potravinu a pokud ano, vypiš její cenu, pokud ne, vypiš, že není.
-            string includedKey = "bagel";
-            if (shoppingList.ContainsKey(includedKey))
+            string includedKey = "beans";
+            if (shoppingList.TryGetValue(includedKey, out int value))
             {
-                Console.WriteLine($"{includedKey}:  {shoppingList[includedKey]}");
-            }
-            else
-            {
-                Console.WriteLine($"{includedKey} is not on the shopping list");
+                Console.WriteLine($"{includedKey}:  {value}");
             }
 
             // 9. Řekněme, že už jsi do slovníku přidala např. chleba a zjistila, že máš v nákupní tašce ještě jeden -> uprav hodnotu k tomu klíči tak, aby obsahovala hromadnou cenu za všechny stejné položky.
             KeyValuePair<string, int> bread = new KeyValuePair<string, int>("bread", 89);
-            if (shoppingList.ContainsKey(bread.Key))
+            if (!shoppingList.TryAdd(bread.Key, bread.Value))
             {
                 shoppingList[bread.Key] += bread.Value; 
-            }
-            else
-            {
-                shoppingList.Add(bread.Key, bread.Value);
             }
 
             // Prints out the shopping list.
