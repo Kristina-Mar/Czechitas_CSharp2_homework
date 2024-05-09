@@ -17,7 +17,14 @@
 
             // 4. Smaž z tohoto listu libovolnou hodnotu.
             string wordToRemove = "weekend";
-            listOfStrings.Remove(wordToRemove);
+            if(listOfStrings.Remove(wordToRemove))
+            {
+                Console.WriteLine($"{wordToRemove} successfully removed from the list");
+            }
+            else
+            {
+                Console.WriteLine($"the list does not include {wordToRemove}");
+            }
 
             // 5. Zjisti, jestli tento list obsahuje nějakou hodnotu pomocí list metody Contains
             string includedWord = "bed";
