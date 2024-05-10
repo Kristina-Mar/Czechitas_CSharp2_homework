@@ -31,9 +31,9 @@
             List<string> ovoce = new List<string>() { "Merunka", "Jablko", "Pomeranc", "Meloun", "Malina", "Limetka" };
 
             // 1. Řešení
-            List<string> mOvoce = ovoce.Where(o => o.StartsWith("m", StringComparison.OrdinalIgnoreCase)).ToList();
+            // List<string> mOvoce = ovoce.Where(o => o.StartsWith("m", StringComparison.OrdinalIgnoreCase)).ToList();
 
-            foreach (string o in mOvoce)
+            foreach (string o in ovoce.Where(o => o.StartsWith("m", StringComparison.OrdinalIgnoreCase)))
             {
                 Console.WriteLine(o);
             }
@@ -46,9 +46,9 @@
         };
 
             // 2. Řešení
-            List<int> nasobky4a6 = ruznaCisla.Where(c => c % 4 == 0 || c % 6 == 0).ToList();
+            // List<int> nasobky4a6 = ruznaCisla.Where(c => c % 4 == 0 || c % 6 == 0).ToList();
 
-            foreach (int cislo in nasobky4a6)
+            foreach (int cislo in ruznaCisla.Where(c => c % 4 == 0 || c % 6 == 0))
             {
                 Console.WriteLine(cislo);
             }
@@ -68,9 +68,9 @@
         };
 
             // 4. Řešení
-            List<string> vzestupne = jmena.OrderBy(j => j).ToList();
+            // List<string> vzestupne = jmena.OrderBy(j => j).ToList();
 
-            foreach (string text in vzestupne)
+            foreach (string text in jmena.OrderBy(j => j))
             {
                 Console.WriteLine(text);
             }
@@ -127,6 +127,11 @@
                 Console.WriteLine(polozka.Banka + ": " + string.Join(" a ", polozka.Milionari));
             }
 
+            foreach (var banka in zakaznici.Where(z => z.Zustatek >= 1000000).Select(z => z.Banka).Distinct())
+            {
+                Console.WriteLine(banka + ": " + string.Join(" a ", zakaznici.Where(z => z.Zustatek >= 1000000 && z.Banka == banka).Select(z => z.Jmeno)));
+            }
+
             // ==========================================		
             // 8. Vytisknete jmeno kazdeho milionare a jeho banky
             // Napr
@@ -140,18 +145,32 @@
         };
 
             // 8. Řešení
-            List<Zakaznik> reportMilionaru = (from milionar in milionari
-                                             join banka in banky on milionar.Banka equals banka.Symbol
-                                             select new Zakaznik
-                                             {
-                                                 Jmeno = milionar.Jmeno,
-                                                 Zustatek = milionar.Zustatek,
-                                                 Banka = banka.Jmeno
-                                             }).ToList();
+            //List<Zakaznik> reportMilionaru = (from milionar in milionari
+            //                                  join banka in banky on milionar.Banka equals banka.Symbol
+            //                                  select new Zakaznik
+            //                                  {
+            //                                      Jmeno = milionar.Jmeno,
+            //                                      Zustatek = milionar.Zustatek,
+            //                                      Banka = banka.Jmeno
+            //                                  }).ToList();
+
+            IEnumerable<Zakaznik> reportMilionaru = (from milionar in milionari
+                                              join banka in banky on milionar.Banka equals banka.Symbol
+                                              select new Zakaznik
+                                              {
+                                                  Jmeno = milionar.Jmeno,
+                                                  Zustatek = milionar.Zustatek,
+                                                  Banka = banka.Jmeno
+                                              });
 
             foreach (Zakaznik zakaznik in reportMilionaru)
             {
                 Console.WriteLine(zakaznik.Jmeno + " v " + zakaznik.Banka);
+            }
+
+            foreach (Zakaznik zakaznik in zakaznici.Where(z => z.Zustatek >= 1000000))
+            {
+                Console.WriteLine($"{zakaznik.Jmeno} v {banky.First(b => b.Symbol == zakaznik.Banka).Jmeno}");
             }
         }
     }
