@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson2_guess_the_number", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson3_homework", "Lesson3_homework\Lesson3_homework.csproj", "{4E6AC850-BD41-4E17-8947-CEE4AE2DD712}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson4_homework", "Lesson4_homework\Lesson4_homework.csproj", "{3A29A16C-3E77-4AA7-8B0A-A1DBC6E7C010}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson4_homework", "Lesson4_homework\Lesson4_homework.csproj", "{3A29A16C-3E77-4AA7-8B0A-A1DBC6E7C010}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5_homework_LINQ", "Lesson5_homework_LINQ\Lesson5_homework_LINQ.csproj", "{F9F8AAF2-475F-49CE-A48F-5DB6525F6C83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{3A29A16C-3E77-4AA7-8B0A-A1DBC6E7C010}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A29A16C-3E77-4AA7-8B0A-A1DBC6E7C010}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A29A16C-3E77-4AA7-8B0A-A1DBC6E7C010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F8AAF2-475F-49CE-A48F-5DB6525F6C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F8AAF2-475F-49CE-A48F-5DB6525F6C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F8AAF2-475F-49CE-A48F-5DB6525F6C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F8AAF2-475F-49CE-A48F-5DB6525F6C83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
