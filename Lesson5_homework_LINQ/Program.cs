@@ -154,14 +154,14 @@
             //                                      Banka = banka.Jmeno
             //                                  }).ToList();
 
-            IEnumerable<Zakaznik> reportMilionaru = (from milionar in milionari
+            IEnumerable<Zakaznik> reportMilionaru = from milionar in milionari
                                               join banka in banky on milionar.Banka equals banka.Symbol
                                               select new Zakaznik
                                               {
                                                   Jmeno = milionar.Jmeno,
                                                   Zustatek = milionar.Zustatek,
                                                   Banka = banka.Jmeno
-                                              });
+                                              };
 
             foreach (Zakaznik zakaznik in reportMilionaru)
             {
