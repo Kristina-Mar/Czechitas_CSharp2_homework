@@ -9,6 +9,10 @@ namespace Lesson6_OOP
     public class RectangleCreation
     {
         private double _length;
+        private double _width;
+        private double _area;
+        private double _circumference;
+
         public double Length
         {
             get
@@ -30,7 +34,6 @@ namespace Lesson6_OOP
             }
         }
 
-        private double _width;
         public double Width
         {
             get
@@ -51,7 +54,6 @@ namespace Lesson6_OOP
             }
         }
 
-        private double _area;
         public double Area
         {
             get
@@ -65,7 +67,6 @@ namespace Lesson6_OOP
             }
         }
 
-        private double _circumference;
         public double Circumference
         {
             get
@@ -78,6 +79,7 @@ namespace Lesson6_OOP
                 _circumference = 2 * (Length + Width);
             }
         }
+        
         public RectangleCreation(double length, double width)
         {
             Length = length;
