@@ -10,8 +10,6 @@ namespace Lesson6_OOP
     {
         private double _length;
         private double _width;
-        private double _area;
-        private double _circumference;
 
         public double Length
         {
@@ -58,8 +56,7 @@ namespace Lesson6_OOP
         {
             get
             {
-                _area = Length * Width;
-                return _area;
+                return Length * Width;
             }
         }
 
@@ -67,8 +64,7 @@ namespace Lesson6_OOP
         {
             get
             {
-                _circumference = 2 * (Length + Width);
-                return _circumference;
+                return 2 * (Length + Width);
             }
         }
         
@@ -87,6 +83,12 @@ namespace Lesson6_OOP
             Console.WriteLine($"circumference: {Circumference}");
         }
 
+        public void IncreaseSize()
+        {
+            Length += Length;
+            Width += Width;
+        }
+        
         public void ChangeSize(double addLength, double addWidth)
         {
             Length += addLength;

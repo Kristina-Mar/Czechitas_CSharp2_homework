@@ -142,5 +142,22 @@ namespace Lesson6_OOP_UnitTests
             Assert.Equal(area, rectangle.Area, 0.0001);
             Assert.Equal(circumference, rectangle.Circumference, 0.0001);
         }
+
+        [Theory]
+        [InlineData(3, 2.5, 30, 22)]
+        [InlineData(2, 2, 16, 16)]
+        [InlineData(1.1115, 1.928, 8.571888, 12.158)]
+        [InlineData(1, 1.5, 6, 10)]
+
+        public void TestIncreaseSize(double length, double width, double area, double circumference)
+        {
+            RectangleCreation rectangle = new RectangleCreation(length, width);
+            rectangle.IncreaseSize();
+
+            Assert.Equal(length * 2, rectangle.Length, 0.0001);
+            Assert.Equal(width * 2, rectangle.Width, 0.0001);
+            Assert.Equal(length * 2 * width * 2, rectangle.Area, 0.0001);
+            Assert.Equal(2 * (length * 2 + width * 2), rectangle.Circumference, 0.0001);
+        }
     }
 }

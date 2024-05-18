@@ -14,6 +14,11 @@
             rectangle1.PrintRectangleInfo();
             Console.WriteLine();
 
+            Console.WriteLine("Doubling the length and width:");
+            rectangle1.IncreaseSize();
+            rectangle1.PrintRectangleInfo();
+            Console.WriteLine();
+
             Console.WriteLine("Rectangle with length of 0:");
             RectangleCreation rectangle2 = new RectangleCreation(0, 8);
             rectangle2.PrintRectangleInfo();
