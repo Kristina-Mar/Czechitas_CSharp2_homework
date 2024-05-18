@@ -95,13 +95,13 @@ namespace Lesson6_OOP
             Console.WriteLine($"circumference: {Circumference}");
         }
 
-        public void IncreaseSize(double addLength, double addWidth)
+        public void ChangeSize(double addLength, double addWidth)
         {
             Length += addLength;
             Width += addWidth;
         }
 
-        public void IncreaseSize(double increment)
+        public void ChangeSize(double increment)
         {
             Length += increment;
             Width += increment;

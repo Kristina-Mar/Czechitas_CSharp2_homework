@@ -77,7 +77,7 @@ namespace Lesson6_OOP_UnitTests
             double length = 5;
             double width = 3;
             RectangleCreation rectangle = new RectangleCreation(length, width);
-            rectangle.IncreaseSize(increment);
+            rectangle.ChangeSize(increment);
 
             if (length + increment <= 0 && width + increment <= 0)
             {
@@ -117,7 +117,7 @@ namespace Lesson6_OOP_UnitTests
             double length = 5;
             double width = 3;
             RectangleCreation rectangle = new RectangleCreation(length, width);
-            rectangle.IncreaseSize(addLength, addWidth);
+            rectangle.ChangeSize(addLength, addWidth);
 
             if (length + addLength <= 0 && width + addWidth <= 0)
             {

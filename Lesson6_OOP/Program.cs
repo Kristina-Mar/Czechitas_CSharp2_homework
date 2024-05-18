@@ -10,7 +10,7 @@
             Console.WriteLine();
 
             Console.WriteLine("Increasing rectangle size:");
-            rectangle1.IncreaseSize(10, 85.41);
+            rectangle1.ChangeSize(10, 85.41);
             rectangle1.PrintRectangleInfo();
             Console.WriteLine();
 
@@ -25,7 +25,7 @@
             Console.WriteLine();
 
             Console.WriteLine("Increasing square size:");
-            square1.IncreaseSize(20);
+            square1.ChangeSize(20);
             square1.PrintRectangleInfo();
             Console.WriteLine();
 
