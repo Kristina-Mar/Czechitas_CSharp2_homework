@@ -72,7 +72,7 @@ namespace Lesson6_OOP_UnitTests
         [InlineData(-2, 3, 8)]
         [InlineData(-5, 1, 4)]
         [InlineData(-7, 1, 4)]
-        public void TestIncreaseSizeBySameValue(double increment, double area, double circumference)
+        public void TestChangeSizeBySameValue(double increment, double area, double circumference)
         {
             double length = 5;
             double width = 3;
@@ -112,7 +112,7 @@ namespace Lesson6_OOP_UnitTests
         [InlineData(-5, 1, 4, 10)]
         [InlineData(-7, -6, 1, 4)]
         
-        public void TestIncreaseSize(double addLength, double addWidth, double area, double circumference)
+        public void TestChangeSize(double addLength, double addWidth, double area, double circumference)
         {
             double length = 5;
             double width = 3;
