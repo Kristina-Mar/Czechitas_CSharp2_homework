@@ -1,5 +1,4 @@
 using Lesson6_OOP;
-using System.Drawing;
 
 namespace Lesson6_OOP_UnitTests
 {
@@ -18,26 +17,16 @@ namespace Lesson6_OOP_UnitTests
         {            
             RectangleCreation rectangle = new RectangleCreation(length, width);
 
-            if (length <= 0 && width <= 0)
+            if (length <= 0)
             {
-                Assert.Equal(1, rectangle.Length, 0.0001);
-                Assert.Equal(1, rectangle.Width, 0.0001);
+                length = 1;
             }
-            else if (length <= 0)
+            if (width <= 0)
             {
-                Assert.Equal(1, rectangle.Length, 0.0001);
-                Assert.Equal(width, rectangle.Width, 0.0001);
+                width = 1;
             }
-            else if (width <= 0)
-            {
-                Assert.Equal(length, rectangle.Length, 0.0001);
-                Assert.Equal(1, rectangle.Width, 0.0001);
-            }
-            else
-            {
-                Assert.Equal(length, rectangle.Length, 0.0001);
-                Assert.Equal(width, rectangle.Width, 0.0001);
-            }
+            Assert.Equal(length, rectangle.Length, 0.0001);
+            Assert.Equal(width, rectangle.Width, 0.0001);
             Assert.Equal(area, rectangle.Area, 0.0001);
             Assert.Equal(circumference, rectangle.Circumference, 0.0001);
         }
@@ -53,14 +42,10 @@ namespace Lesson6_OOP_UnitTests
 
             if (side <= 0)
             {
-                Assert.Equal(1, rectangle.Length, 0.0001);
-                Assert.Equal(1, rectangle.Width, 0.0001);
+                side = 1;
             }
-            else
-            {
-                Assert.Equal(side, rectangle.Length, 0.0001);
-                Assert.Equal(side, rectangle.Width, 0.0001);
-            }
+            Assert.Equal(side, rectangle.Length, 0.0001);
+            Assert.Equal(side, rectangle.Width, 0.0001);
             Assert.Equal(area, rectangle.Area, 0.0001);
             Assert.Equal(circumference, rectangle.Circumference, 0.0001);
         }
@@ -78,28 +63,19 @@ namespace Lesson6_OOP_UnitTests
             double width = 3;
             RectangleCreation rectangle = new RectangleCreation(length, width);
             rectangle.ChangeSize(increment);
+            length += increment;
+            width += increment;
 
-            if (length + increment <= 0 && width + increment <= 0)
+            if (length <= 0)
             {
-                Assert.Equal(1, rectangle.Length, 0.0001);
-                Assert.Equal(1, rectangle.Width, 0.0001);
+                length = 1;
             }
-            else if (length + increment <= 0)
+            if (width <= 0)
             {
-                Assert.Equal(1, rectangle.Length, 0.0001);
-                Assert.Equal(width + increment, rectangle.Width, 0.0001);
+                width = 1;
             }
-            // This case won't happen with current length (5) and width (3).
-            /* else if (width + increment <= 0)
-            {
-                Assert.Equal(length + increment, rectangle.Length, 0.0001);
-                Assert.Equal(1, rectangle.Width, 0.0001);
-            } */
-            else
-            {
-                Assert.Equal(length + increment, rectangle.Length, 0.0001);
-                Assert.Equal(width + increment, rectangle.Width, 0.0001);
-            }
+            Assert.Equal(length, rectangle.Length, 0.0001);
+            Assert.Equal(width, rectangle.Width, 0.0001);
             Assert.Equal(area, rectangle.Area, 0.0001);
             Assert.Equal(circumference, rectangle.Circumference, 0.0001);
         }
@@ -119,26 +95,19 @@ namespace Lesson6_OOP_UnitTests
             RectangleCreation rectangle = new RectangleCreation(length, width);
             rectangle.ChangeSize(addLength, addWidth);
 
-            if (length + addLength <= 0 && width + addWidth <= 0)
+            length += addLength;
+            width += addWidth;
+
+            if (length <= 0)
             {
-                Assert.Equal(1, rectangle.Length, 0.0001);
-                Assert.Equal(1, rectangle.Width, 0.0001);
+                length = 1;
             }
-            else if (length + addLength <= 0)
+            if (width <= 0)
             {
-                Assert.Equal(1, rectangle.Length, 0.0001);
-                Assert.Equal(width + addWidth, rectangle.Width, 0.0001);
+                width = 1;
             }
-            else if (width + addWidth <= 0)
-            {
-                Assert.Equal(length + addLength, rectangle.Length, 0.0001);
-                Assert.Equal(1, rectangle.Width, 0.0001);
-            }
-            else
-            {
-                Assert.Equal(length + addLength, rectangle.Length, 0.0001);
-                Assert.Equal(width + addWidth, rectangle.Width, 0.0001);
-            }
+            Assert.Equal(length, rectangle.Length, 0.0001);
+            Assert.Equal(width, rectangle.Width, 0.0001);
             Assert.Equal(area, rectangle.Area, 0.0001);
             Assert.Equal(circumference, rectangle.Circumference, 0.0001);
         }
@@ -156,8 +125,8 @@ namespace Lesson6_OOP_UnitTests
 
             Assert.Equal(length * 2, rectangle.Length, 0.0001);
             Assert.Equal(width * 2, rectangle.Width, 0.0001);
-            Assert.Equal(length * 2 * width * 2, rectangle.Area, 0.0001);
-            Assert.Equal(2 * (length * 2 + width * 2), rectangle.Circumference, 0.0001);
+            Assert.Equal(area, rectangle.Area, 0.0001);
+            Assert.Equal(circumference, rectangle.Circumference, 0.0001);
         }
     }
 }

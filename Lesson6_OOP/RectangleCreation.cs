@@ -19,7 +19,7 @@ namespace Lesson6_OOP
             }
             private set
             {
-                //_length = value <= 0 ? 1 : value;
+                //_length = value <= 0 ? 1 : value; Version without console printing.
                 if (value <= 0)
                 {
                     _length = 1;
@@ -83,19 +83,19 @@ namespace Lesson6_OOP
             Console.WriteLine($"circumference: {Circumference}");
         }
 
-        public void IncreaseSize()
+        public void IncreaseSize() // DOubles the length and width.
         {
             Length += Length;
             Width += Width;
         }
         
-        public void ChangeSize(double addLength, double addWidth)
+        public void ChangeSize(double addLength, double addWidth) // With specified length and width size change.
         {
             Length += addLength;
             Width += addWidth;
         }
 
-        public void ChangeSize(double increment)
+        public void ChangeSize(double increment) // Changes length and with by the same increment.
         {
             Length += increment;
             Width += increment;
