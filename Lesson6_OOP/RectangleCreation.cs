@@ -61,10 +61,6 @@ namespace Lesson6_OOP
                 _area = Length * Width;
                 return _area;
             }
-            private set
-            {
-                _area = Length * Width;
-            }
         }
 
         public double Circumference
@@ -73,10 +69,6 @@ namespace Lesson6_OOP
             {
                 _circumference = 2 * (Length + Width);
                 return _circumference;
-            }
-            private set
-            {
-                _circumference = 2 * (Length + Width);
             }
         }
         
