@@ -10,7 +10,7 @@ namespace Lesson6_OOP_UnitTests
         [InlineData(2.223, 3.856, 8.571888, 12.158)]
         public void RectangleConstructorTwoParameters_WillCreateRectangleInstance_WhenTwoValidParametersAreProvided(double length, double width, double area, double circumference)
         {            
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
 
             Assert.Equal(length, rectangle.Length, 0.0001);
             Assert.Equal(width, rectangle.Width, 0.0001);
@@ -23,7 +23,7 @@ namespace Lesson6_OOP_UnitTests
         [InlineData(-3.6, 2, 2, 6)]
         public void RectangleConstructorTwoParameters_WillCreateRectangleInstance_WhenInvalidLengthParameterIsProvided(double length, double width, double area, double circumference)
         {
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
 
             Assert.Equal(1, rectangle.Length, 0.0001);
             Assert.Equal(width, rectangle.Width, 0.0001);
@@ -36,7 +36,7 @@ namespace Lesson6_OOP_UnitTests
         [InlineData(2, -3.6, 2, 6)]
         public void RectangleConstructorTwoParameters_WillCreateRectangleInstance_WhenInvalidWidthParameterIsProvided(double length, double width, double area, double circumference)
         {
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
 
             Assert.Equal(length, rectangle.Length, 0.0001);
             Assert.Equal(1, rectangle.Width, 0.0001);
@@ -49,7 +49,7 @@ namespace Lesson6_OOP_UnitTests
         [InlineData(2.223, 4.941729, 8.892)]
         public void RectangleConstructorOneParameter_WillCreateRectangleInstance_WhenValidParameterIsProvided(double side, double area, double circumference)
         {
-            RectangleCreation rectangle = new RectangleCreation(side);
+            Rectangle rectangle = new Rectangle(side);
 
             Assert.Equal(side, rectangle.Length, 0.0001);
             Assert.Equal(side, rectangle.Width, 0.0001);
@@ -62,7 +62,7 @@ namespace Lesson6_OOP_UnitTests
         [InlineData(-3.6, 1, 4)]
         public void RectangleConstructorOneParameter_WillCreateRectangleInstance_WhenInvalidParameterIsProvided(double side, double area, double circumference)
         {
-            RectangleCreation rectangle = new RectangleCreation(side);
+            Rectangle rectangle = new Rectangle(side);
 
             Assert.Equal(1, rectangle.Length, 0.0001);
             Assert.Equal(1, rectangle.Width, 0.0001);
@@ -75,7 +75,7 @@ namespace Lesson6_OOP_UnitTests
         [InlineData(2.223, 37.725729, 24.892)]
         public void ChangeSizeOneParameter_WillChangeWidthAndLengthByGivenIncrement_WhenValidParameterIsProvided(double length, double width, double increment)
         {
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
 
             double expectedLength = length + increment;
             double expectedWidth = width + increment;
@@ -92,7 +92,7 @@ namespace Lesson6_OOP_UnitTests
         public void ChangeSizeOneParameter_WillChangeWidthAndLengthByGivenIncrement_WhenLengthWouldBecomeInvalid(double length, double width, double increment)
         {
             // If length should mathematically drop to 0 or below.
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
 
             double expectedLength = 1;
             double expectedWidth = width + increment;
@@ -109,7 +109,7 @@ namespace Lesson6_OOP_UnitTests
         public void ChangeSizeOneParameter_WillChangeWidthAndLengthByGivenIncrement_WhenWidthWouldBecomeInvalid(double length, double width, double increment)
         {
             // If width should mathematically drop to 0 or below.
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
 
             double expectedLength = length + increment;
             double expectedWidth = 1;
@@ -126,7 +126,7 @@ namespace Lesson6_OOP_UnitTests
         
         public void ChangSizeTwoParameters_WillChangeLengthAndWidthByGivenIncrements_WhenTwoValidParametersAreProvided(double length, double width, double addLength, double addWidth)
         {
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
             double expectedLength = length + addLength;
             double expectedWidth = width + addWidth;
 
@@ -143,7 +143,7 @@ namespace Lesson6_OOP_UnitTests
         public void ChangSizeTwoParameters_WillChangeLengthAndWidthByGivenIncrements_WhenInvalidLengthIncrementIsProvided(double length, double width, double addLength, double addWidth)
         {
             // If length should mathematically drop to 0 or below.
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
             double expectedLength = 1;
             double expectedWidth = width + addWidth;
 
@@ -160,7 +160,7 @@ namespace Lesson6_OOP_UnitTests
         public void ChangSizeTwoParameters_WillChangeLengthAndWidthByGivenIncrements_WhenInvalidWidthIncrementIsProvided(double length, double width, double addLength, double addWidth)
         {
             // If width should mathematically drop to 0 or below.
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
             double expectedLength = length + addLength;
             double expectedWidth = 1;
 
@@ -178,7 +178,7 @@ namespace Lesson6_OOP_UnitTests
 
         public void IncreaseSize_WillDoubleLengthAndWidth_WhenExecuted(double length, double width)
         {         
-            RectangleCreation rectangle = new RectangleCreation(length, width);
+            Rectangle rectangle = new Rectangle(length, width);
             double expectedLength = length * 2;
             double expectedWidth = width * 2;
 

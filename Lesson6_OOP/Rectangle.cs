@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lesson6_OOP
 {
-    public class RectangleCreation
+    public class Rectangle
     {
         private double _length;
         private double _width;
@@ -68,12 +68,12 @@ namespace Lesson6_OOP
             }
         }
         
-        public RectangleCreation(double length, double width)
+        public Rectangle(double length, double width)
         {
             Length = length;
             Width = width;
         }
-        public RectangleCreation(double squareSide) : this(squareSide, squareSide) { }
+        public Rectangle(double squareSide) : this(squareSide, squareSide) { }
 
         public void PrintRectangleInfo()
         {

@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Regular rectangle 5.63 x 8:");
-            RectangleCreation rectangle1 = new RectangleCreation(5.63, 8);
+            Rectangle rectangle1 = new Rectangle(5.63, 8);
             rectangle1.PrintRectangleInfo();
             Console.WriteLine();
 
@@ -20,12 +20,12 @@
             Console.WriteLine();
 
             Console.WriteLine("Rectangle 0 x 8:");
-            RectangleCreation rectangle2 = new RectangleCreation(0, 8);
+            Rectangle rectangle2 = new Rectangle(0, 8);
             rectangle2.PrintRectangleInfo();
             Console.WriteLine();
 
             Console.WriteLine("Regular square 5 x 5:");
-            RectangleCreation square1 = new RectangleCreation(5);
+            Rectangle square1 = new Rectangle(5);
             square1.PrintRectangleInfo();
             Console.WriteLine();
 
@@ -35,7 +35,7 @@
             Console.WriteLine();
 
             Console.WriteLine("Square -8.5 x -8.5:");
-            RectangleCreation square2 = new RectangleCreation(-8.5);
+            Rectangle square2 = new Rectangle(-8.5);
             square2.PrintRectangleInfo();
             Console.WriteLine();
         }
