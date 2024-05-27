@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lesson7_objects
 {
-    internal class GraphicObject
+    internal abstract class GraphicObject
     {
         public string Colour { get; set; } = "White";
 
@@ -21,7 +21,6 @@ namespace Lesson7_objects
         }
         public virtual void PrintToConsole()
         {
-            Console.WriteLine("X");
         }
     }
 }
