@@ -13,7 +13,7 @@
             
             //graphicObjects.ForEach(o => o.PrintToConsole());
 
-            foreach (GraphicObject o in graphicObjects)
+            foreach (var o in graphicObjects)
             {
                 o.PrintToConsole();
                 Console.WriteLine();
